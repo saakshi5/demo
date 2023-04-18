@@ -1,0 +1,18 @@
+
+h1:hover{
+   color:pink; 
+}
+.para{
+   background:white;
+}
+#head{
+    color:red;
+}
+
+p + a{
+    color: red;
+} 
+
+/* p ~ a {
+    color: yellowgreen;
+} */

@@ -1,0 +1,103 @@
+Shortcuts:-
+ctrl+/ -to comment lines in css
+
+CSS Specifiers
+1.element selector(h1,p)
+2.class selector(.classname)-it is used to change many element.
+3.id selector(#id)-it is used for specific one element.
+
+id has highest priority.But inline as more priority than id.
+
+Inline CSS format:
+style="color:red;"
+
+WHITESPACE
+Multiple classes can be written together in one line using WHITESPACE:-
+<h2 class="head google-id">
+</h2>
+
+SELECTORS
+select elements in code.
+
+CSS Psedoselectors
+1.hover-use colon and name of selector
+h1:hover{
+   color:pink; 
+}
+2.active
+3.link
+4.visited
+
+
+CHILD Psedoselectors
+Mainly used in lists.
+1.li:first-child
+{
+}
+2.li:last-child
+{
+}
+3.li:nth-child(n)
+{
+}
+here,n is the which child you want to change.
+
+4.li:only-child
+{
+}
+When there is only 1 element in list.
+
+
+
+Anchor Psedoselectors
+<a href="">Click here</a>
+
+
+
+DESCENDENT SELECTOR
+ul li 
+{
+}
+This means all li tags inside ul tags are styled. Here, li is child of ul parent.
+
+
+DIRECT STYLE SELECTOR
+ul > li{
+}
+Here, directly li tag is selected from ul tag.
+
+
+ADAJCENT Psedoselectors
+p + a{
+    color: red;
+}
+here,<a> tag after para will be shown red.
+
+
+GENERAL SIBLING SELECTOR:-
+p ~ a{
+
+}
+Here,all anchor tags which are inside <p> are styled.
+
+
+
+ATTRIBUTE SELECTOR
+tag[attribute=value]
+eg:- 
+img[src=""]
+{
+}
+
+h2[class=google-id]
+{
+}
+
+PROPERTIES
+Gives the elements styling.
+colon and semicolon are always needed.
+SYNTAX
+property:value;
+
+eg
+color:red;
