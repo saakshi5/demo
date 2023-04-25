@@ -1,6 +1,8 @@
 Shortcuts:-
 ctrl+/ -to comment lines in css
 
+<div> tag is a container.
+<scan> tag is a container.
 CSS Specifiers
 1.element selector(h1,p)
 2.class selector(.classname)-it is used to change many element.
@@ -101,3 +103,379 @@ property:value;
 
 eg
 color:red;
+
+Background Image in CSS
+
+1.body{
+    background:url("https://lh3.googleusercontent.com/4mVNVUybMXXJ5k-PuXHwqwBFDLUZbAuSxa7xcypndKhFZ9RPEGVcoXpU9mLQL6lGg3z3Cvp5pJFWDXwKiYDPWOH9zQ=w640-h400-e365-rj-sc0x00ffffff");
+}
+here,the address is directly taken from google by copying img address.
+
+2. background:url("z.jpg");
+Image already in same folder.
+
+Background Properties
+background-size:cover;//only 1 img in backgroun
+background-repeat:repeat;//img is repeated to fill places. Default
+background-repeat:no-repeat; //only 1 img is sown but only small part of container is filled.
+
+COLOR OPACITY AND TRANSPARENCY
+rgba(204,229,255,0.2);
+a=opacity or transparency or alpha.V
+0=Completely transparent
+1=fully visible
+
+COLOUR GRADIENT
+Transition between colours.
+1.Linear(straight lines or diagonals)
+background: linear-gradient(to right,red,green,blue);
+There are 4 directions.
+right,left,top,bottom.   
+There can be any number of colors.
+
+SAME COLOUR GRADIATION
+ background: linear-gradient(to right, rgb(25, 230, 202),rgba(25, 230, 202,0));
+
+DIAGONAL 
+ background: linear-gradient(to bottom right, rgb(25, 230, 202),rgba(25, 230, 202,0));
+START and END same colour.But end colour has alpha value.
+                            
+2.Radio(circular)
+percentages and proportions of colours are defined.
+Smallest % start and largest at end.NOT COMPULSORY to write %.
+background: radial-gradient(red 40%,blue 60%);
+ANY NUMBER OF COLOURS.
+
+SHAPE cn be CHANGED.
+  background: radial-gradient(circle,red 40%,blue 60%)
+
+Gradient can be applied to background colour also.
+background: linear-gradient(to bottom,rgb(25, 230, 202),rgba(25, 230, 202,0));
+
+CSS UNITS
+1.Absolute(cm,m,inch)
+2.Relative-depend on something(%,em,px,pc,pt) pc>pt>px (height in px and width in %)
+px works like absolute.Px images appear same on any device.
+em doubles the font
+font-size:2em;
+
+Text manipulation
+Properties:-
+text-decoration:underline,overline,line-through,none;
+text-transform: capitalize,uppercase,lowercase;-It changes the font-size
+text-align:left,right,center,justify;
+justify set all lines to same length.
+
+Font Size,Bolding & Style
+font-size:10px,2em;
+font-weight:400;(bolding)
+font-style:normal,italic,oblique;
+font-family:sans-serif; or full family
+font-family:"Georgia",serif;  //if georgia unavailable use serif
+
+CSS BOX MODEL
+It is a series of positioning properties designed to help with layout.
+Layers of MODEL:
+1.Content
+
+2.Padding-space between content and border.
+padding: 200px;
+padding:100px 40px 5px 0; //  top right bottom left
+3.Border-it is divider between padding and margin.
+border:size style color;
+ eg:- border:8px solid black;
+size in px
+style=dotted,dashed,solid,double
+
+4.Margin-space between border and other contents i.e external elements.
+ margin: 40px;  
+ margin: 80px 40px; //top&bottom  left&right
+
+
+CSS FLOAT & DISPLAY TYPES
+Display Types:-
+1.inline-doesn't move or change element in its own block.Elements naturally occur on the page.
+eg:- <span> tag
+2.blocklevel-moves element in its own block or section.Creates spacing around elements.
+eg:- <div>,<p>
+
+FLOAT
+float:left,right;
+
+DISPLAY
+it displays behavior of the elements.It can be use to hide elements.
+display:none;
+display:inline-block; //most commonly used. It combines properties of inline and blocklevel elemnts display.
+
+
+
+CSS FLEXBOX
+It is layout technique.
+It is used to create or arrange items easily.
+It is an alternative to floats,displays & other layout properties.
+
+FLEXBOX Components
+1.Container-It is parent element in which the display type is active.Usually in form of div.It contains items.
+It has background and margin.
+It is parent container.
+eg:-
+Parent <div> class
+.con{
+margin:10px;
+display: flex;
+flex-direction:row;//default
+flex-direction:row-reverse,column-reverse;
+}
+It sets flex items row.
+
+2.items-These are child elements of conatiner & make up contents of box.eg:-imgs,span,etc.
+Items are inside boxes.
+
+FLEX DIRECTION & WRAP
+Arrange items in specific any order.(reverse also )
+
+WRAP
+When an item is wrapped it moves to a new row or column to avoid the exceding max length.
+It is used when there are many items in container.
+flex-wrap:wrap,wrap-reverse;
+
+CONTENT ALIGNMENT
+
+1.horizontal
+It aligns items in a row as specified. 
+eg:-
+justify-content:center,flex-end,flex-start;
+justify-content:space-between; //space between items
+justify-content:space-around;  //space around all sides of items i.e edges.
+
+ALIGNMENT
+
+These can be applied to container's css.
+1.align-items:stretch;
+It defines how to stretch the items inside container from top to bottom.
+
+2.align-items:baseline;
+It defines how to stretch the items inside container at top.
+
+3.align-items: center,flex-end,flex-start;
+
+Individual alignment for each item is given as:
+align-self:center,flex-end,flex-start;
+
+
+FLEX ITEM ORDER
+It is inside container-items.
+It is used to arrange items in any order.
+<div style="order:4"></div>
+
+FLEX SHRINK,GROW & BASIS
+1.basis
+Defines min width of an item.
+flex-basis:100px;
+Apply this property to every single one of the items.
+
+2.grow
+Gives same amount of space for each item i.e all are divided equally.
+flex-grow:1;//default=0
+Apply this property to every single one of the items.
+
+3.shrink
+Defines shrinkage rate of each container item relative to rest of the items.
+flex-shrink:1; //default=1
+
+FLEX PROPERTY
+All 3 TOGETHER.
+Use it inside con-items tag like inline css.
+flex:grow shrink basis;
+eg:-
+style="order:3; flex:1 3 100px;"  //semicolon between style attributes is necessary.
+
+GRID
+Similar to flexbox,Grid is display type that can be used to activate layout features on a container element.
+It is focused on providing tools for both dimensions(width+height), whereas flexbox is focused on width alone.
+
+Grid Container
+Property:-
+display: grid;
+grid-template-columns: auto  auto auto auto;
+grid-template-rows: auto auto;
+justify-content: center,start,end;
+justify-content:space-evenly,space-around;//same as flex 
+align-content: space-evenly; //same as flex
+
+eg:-
+.grid-con{
+    background: rgb(190, 211, 247);
+    margin:10px;
+    height: 300px;
+    display: grid;
+    width: 35%;
+    grid-template-columns: auto  auto auto auto;
+  grid-template-rows: auto auto;
+  justify-content:space-around;
+  align-content: space-evenly;
+ 
+}
+
+
+
+Grid Items
+Properties Used:-
+
+.grid-item{
+ color: black;
+ font-size: 25px;
+ font-family: serif;
+text-align: center;
+line-height: 150%;
+margin: 10px;
+width: 100px;
+height: 30px;
+background:  beige;
+
+}
+
+ROW & COLIMN GAPS
+Gpas between rows & cols.
+Properties:-
+ grid-column-gap:20px; 
+grid-row-gap:20px;
+
+TOGETHER:-
+grid-gap: row column;
+grid-gap:100px 50px;
+
+Columns & Rows
+Defines how to reaarange & resize items.
+It is used to align items ina ny way you want manually.
+
+
+Properties:-
+style="grid-column:1 /3; grid-row:1 / 3;    //inline css for each item
+ 1 / 3 means start at line 1 and end at line 3 for both row & col.
+
+But when lines are not known use span keyword
+This means take 2 spaces from start point for both row & cols.
+Property:-
+style="grid-column:1 / span 3; grid-row:1 / span 2;    
+
+GRID AREA
+Shortcut for above properties.
+SYNTAX
+grid-area:rowstart / colstart / rowend /colend;
+eg:-
+grid-area: 1 / 1 / span 2 / span 3;
+
+
+TRANSITION PROPERTY
+Psuedoselector is used to change a state or properties.
+Transition styles:-
+ease
+linear
+ease-in-out
+
+transition: property-to-change duration style delay;
+eg:-
+ transition: background 2s ease 1s;
+
+delay is for transition style.
+duration is time taken to move from one property to other.(in sec,ms)
+
+Transition doesn't work on all browers so use following preffixes:-
+Firefox chrome
+-webkit-transition: background 2s ease 1s;
+
+Mozilla
+-moz-transition: background 2s ease 1s;
+
+Opera
+-o-transition: background 2s ease 1s;
+
+Microsoft
+-ms-transition: background 2s ease 1s;
+
+
+
+TRANSFORMATION FUNCTIONS    //rgb is a function
+
+1.Physical Changes:-
+ transform: translate(20px,20px); 
+ transform: translate(x-axis,y-axis);  //+ve
+It transaltes the element.
+
+2.Rotation                      //opposite of protractor
+   transform: rotate(360deg);   0(left)  90(top)  180(right)  270(bottom)  360(left)
+USING SKEW
+skewX();
+according to x-axis(deg on x-axis)
++ve up
+-ve bottom
+eg:-
+ transform: skewX(40deg)
+
+skewY(); 
+according to y-axis(deg on y-axis)
+eg:-
+ transform: skewY(-40deg)
+
+3.Translation
+
+4.Scaling
+Change size.
+ transform: scale(2);
+
+CSS ANIMATIONS
+Makes change to one and apply to others.
+Animation is split into frames.
+Each animation has atleast 2 keyframes.
+
+To create animation format:-
+
+@keyframes any_name{
+ %{property:value};  //there can be any number of properties
+ %{property:value};
+}
+
+
+Types to add keyframes format:-
+1.from-to-used when there are only 2 stops.
+NO SEMOCOLONS.
+@keyframes any_name{
+ from{color:red}
+  to{color:black}
+}
+
+2.Percentages-used when there are various variations to be made.
+% can be any %s.
+NO SEMICOLONS BETWEEN PERCENTAGES.
+eg:-
+@keyframes any_name{
+ 0%{color:red;  transform: translate(0px,0px);  }
+  50%{color:pink;  transform: translate(10px,10px); }
+ 100%{color:black;  transform: translate(20px,20px); }
+}
+
+APPLY ANIMATION
+Define it in a class or id.
+  animation-name: animation-name;
+  animation-duration: 5s;
+animation-timing-function: ease-in-out,ease,ease-in,linear;  //style animation
+animation-delay: 2s;                     //after how much time the animation will start
+animation-iteration-count: 3,infinite;   //how many times to repeat 
+animation-direction: reverse,normal,alternate-reverse,alternate;
+
+eg:-
+#animate{
+    animation-name: red-to-black;
+    animation-duration: 5s;
+animation-timing-function:linear;
+animation-delay: 2s;
+animation-iteration-count: infinite;
+animation-direction:alternate-reverse;
+}
+
+SHORTHAND:-
+animation: red-to-black 5s linear 2s infinite alternate;
+
+It can be applied to specific browser tpe.
+-webkit-animation: red-to-black 5s linear 2s infinite alternate;
