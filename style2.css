@@ -1,3 +1,5 @@
+
+
 .grid-con{
     background: rgb(190, 211, 247);
     margin:10px;
@@ -78,6 +80,47 @@ h1:hover{
     height: 250px;
     width: 30%;
     display: inline-block;
+}
+.conn{
+    height:35px;
+    width:45%;
+    display:inline-block;
+    border:25px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin: 5px;
+}
+.conel{
+    padding: 20px;
+    background-color: black;
+    color: white;
+    font-size: medium;
+    border: 8px solid black;
+    text-align: center;
+    text-decoration: none;  
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+}
+.item{
+    height: 20px;
+    width:100%;
+    padding: 2px;
+    border: 2px solid white;
+    text-align: center;
+    margin: 5px;
+line-height: 100%;
+}
+#heading{
+    height: 20px;
+    width:100%;
+    padding: 2px;
+    border: 2px solid white;
+    text-align: center;
+    margin: 5px;
+line-height: 100%;
 }
 #head{
     color:rgb(219, 83, 197);
